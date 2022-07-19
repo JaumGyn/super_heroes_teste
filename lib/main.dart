@@ -21,12 +21,13 @@ class MyApp extends StatelessWidget {
         title: 'Super Heroes',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-            primaryColor: Colors.white,
-            visualDensity: VisualDensity.adaptivePlatformDensity,
-            scaffoldBackgroundColor: Colors.green.shade200,
-            appBarTheme: AppBarTheme(elevation: 0),
-            textSelectionTheme:
-                TextSelectionThemeData(cursorColor: Colors.orange)),
+          primaryColor: Colors.white,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          scaffoldBackgroundColor: Colors.green.shade200,
+          appBarTheme: AppBarTheme(elevation: 0),
+          textSelectionTheme:
+              TextSelectionThemeData(cursorColor: Colors.orange),
+        ),
         home: Home(),
       ),
     );

@@ -100,9 +100,10 @@ class _HomeState extends State<Home> {
                     superHeroesStore.loading == true
                         ? Center(
                             child: SizedBox(
-                                height: 80,
-                                width: 80,
-                                child: Lottie.asset('assets/running.json')),
+                              height: 80,
+                              width: 80,
+                              child: Lottie.asset('assets/running.json'),
+                            ),
                           )
                         : SizedBox(
                             width: 0,
