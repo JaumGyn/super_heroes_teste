@@ -5,9 +5,13 @@ on:
     branches:
       - develop
       - master
+  pull_request:
+      - develop
+      - master
 
 jobs:
-  continuous-integration:
+  flutter_test:
+    name: Run Flutter analyze and test
     runs-on: ubunto-latest
     steps:
       - uses: actions/checkout@v2
