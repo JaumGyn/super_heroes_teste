@@ -389,13 +389,12 @@ class PowerStats extends StatelessWidget {
                 ),
           ),
           subtitle: LinearPercentIndicator(
-            animation: true,
-            lineHeight: 15.0,
-            animationDuration: 5000,
-            percent: double.parse(heroItem!.powerstats!.durability!) / 100.0,
-            linearStrokeCap: LinearStrokeCap.roundAll,
-            progressColor: Colors.orangeAccent,
-          ),
+              animation: true,
+              lineHeight: 15.0,
+              animationDuration: 5000,
+              percent: double.parse(heroItem!.powerstats!.durability!) / 100.0,
+              linearStrokeCap: LinearStrokeCap.roundAll,
+              progressColor: Colors.orangeAccent),
         ),
         ListTile(
           title: Text(
