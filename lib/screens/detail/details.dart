@@ -394,7 +394,7 @@ class PowerStats extends StatelessWidget {
             animationDuration: 5000,
             percent: double.parse(heroItem!.powerstats!.durability!) / 100.0,
             linearStrokeCap: LinearStrokeCap.roundAll,
-            progressColor: Colors.orangeAccent,
+            progressColor: Colors.orange,
           ),
         ),
         ListTile(

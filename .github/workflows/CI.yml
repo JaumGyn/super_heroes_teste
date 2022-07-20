@@ -4,32 +4,35 @@ on:
     branches:
       - develop
       - master
-  pull
+  pull_request:
+    branches:
+      - develop
+      - master
 
 jobs:
   flutter_tests:
-  runs-on: windows-latest
-  steps:
-    - name: Get Repository
-      uses: actions/checkout@v3
+    runs-on: windows-latest
+    steps:
+      - name: Get Repository
+        uses: actions/checkout@v3
 
 
-    - name: Setup Java
-      uses: actions/setup-java@v1
-      with:
-        java-version: '12.x'
+      - name: Setup Java
+        uses: actions/setup-java@v1
+        with:
+          java-version: '12.x'
 
 
-    - name: Setup Flutter SDK
-      uses: subosito/flutter-action@v2
-      with:
-        channel: 'stable'
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
 
-    - name: Run Flutter Pub Get
-      run: flutter pub get
+      - name: Run Flutter Pub Get
+        run: flutter pub get
 
-    - name: Run Flutter tests
-      run: flutter test
+      - name: Run Flutter tests
+        run: flutter test
  
 
 
