@@ -1,0 +1,69 @@
+name: CI/CD
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  flutter_tests:
+    runs-on: windows-latest
+    steps:
+      - name: Get Repository
+        uses: actions/checkout@v3
+
+
+      - name: Setup Java
+        uses: actions/setup-java@v1
+        with:
+          java-version: '12.x'
+
+
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+
+      - name: Run Flutter Pub Get
+        run: flutter pub get
+
+      - name: Run Flutter tests
+        run: flutter test
+
+      - name: Run Flutter Analyze
+        run: flutter analyze
+
+  build_apk:
+    runs-on: windows-latest
+    steps:
+      - name: Get Repository
+        uses: actions/checkout@v3
+
+
+      - name: Setup Java
+        uses: actions/setup-java@v1
+        with:
+          java-version: '12.x'
+
+
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+
+      - name: Run Flutter Pub Get
+        run: flutter pub get
+
+      - name: Run Flutter tests
+        run: flutter test
+
+      - name: Run Build APK
+        run: flutter build apk
+
+      - name: Upload apk
+        uses: actions/upload-artifact@v2.1.4
+        with:
+          name: apk
+          path: build/app/outputs/bundle/release/app-release.apk
+ 
+
+
