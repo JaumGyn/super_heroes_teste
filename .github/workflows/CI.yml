@@ -44,7 +44,7 @@ jobs:
         run: flutter format --dry-run --set-exit-if-changed test/
 
       - name: Setup Flutter SDK
-        run: flutter test -- coverage
+        run: flutter test --coverage
 
       - name: Setup Flutter SDK
         run: flutter test --machine > test-results.json
