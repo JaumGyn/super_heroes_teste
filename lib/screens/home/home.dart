@@ -6,6 +6,7 @@ import 'package:super_heroes/shared/search.dart';
 import 'package:super_heroes/shared/superhero.dart';
 import 'package:super_heroes/provider/super_heroes_store.dart';
 import 'package:provider/provider.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -84,8 +85,7 @@ class _HomeState extends State<Home> {
                                       superHeroesStore.getHero(index: index);
 
                                   return Padding(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(5, 2, 5, 2),
+                                    padding: EdgeInsets.fromLTRB(5, 2, 5, 2),
                                     child: SuperHero(
                                       heroItem: hero,
                                     ),
