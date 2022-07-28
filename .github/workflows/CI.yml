@@ -58,7 +58,7 @@ jobs:
       - name: test-coverage
         uses: VeryGoodOpenSource/very_good_coverage@v1.1.1
         with:
-          min_coverage: 00
+          min_coverage: 80
 
  
 
