@@ -57,13 +57,13 @@ jobs:
         run: flutter test
 
       - name: Run Build APK
-        run: flutter build apk
+        run: flutter build apk --release
 
       - name: Upload apk
         uses: actions/upload-artifact@v2.1.4
         with:
           name: apk
-          path: build/app/outputs/bundle/release/app-release.apk
+          path: build\app\outputs\flutter-apk\app-release.apk
  
 
 
