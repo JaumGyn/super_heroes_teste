@@ -28,20 +28,27 @@ jobs:
         with:
           channel: 'stable'
 
+      - name: Setup Flutter SDK
         run: flutter pub get
 
+      - name: Setup Flutter SDK
         run: flutter analyze
-
+        
+      - name: Setup Flutter SDK
         run: flutter test
 
+      - name: Setup Flutter SDK
         run: flutter format --dry-run --set-exit-if-changed lib/
 
+      - name: Setup Flutter SDK
         run: flutter format --dry-run --set-exit-if-changed test/
 
+      - name: Setup Flutter SDK
         run: flutter test -- coverage
-
-        run: flutter test --machine > test-results.json
         
+      - name: Setup Flutter SDK
+        run: flutter test --machine > test-results.json
+
       - name: test-results  
         uses: dorny/test-reporter@v1.4.2
         with:
