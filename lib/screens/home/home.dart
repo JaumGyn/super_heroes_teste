@@ -84,8 +84,7 @@ class _HomeState extends State<Home> {
                                       superHeroesStore.getHero(index: index);
 
                                   return Padding(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(5, 2, 5, 2),
+                                    padding: EdgeInsets.fromLTRB(5, 2, 5, 2),
                                     child: SuperHero(
                                       heroItem: hero,
                                     ),

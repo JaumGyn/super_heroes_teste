@@ -26,7 +26,7 @@ class _DetailsState extends State<Details> {
 }
 
 class SuperheroDetails extends StatefulWidget {
-  const SuperheroDetails({
+  SuperheroDetails({
     Key? key,
     required this.widget,
     required this.heroItem,
@@ -99,10 +99,11 @@ class _SuperheroDetailsState extends State<SuperheroDetails> {
                 ExpansionPanel(
                     headerBuilder: (BuildContext context, bool isExpanded) {
                       return ListTile(
-                          title: Text(
-                        "Biography",
-                        style: TextStyle(fontWeight: FontWeight.w500),
-                      ));
+                        title: Text(
+                          "Biography",
+                          style: TextStyle(fontWeight: FontWeight.w500),
+                        ),
+                      );
                     },
                     body: Biography(
                       heroItem: widget.heroItem,
@@ -135,10 +136,11 @@ class _SuperheroDetailsState extends State<SuperheroDetails> {
                 ExpansionPanel(
                     headerBuilder: (BuildContext context, bool isExpanded) {
                       return ListTile(
-                          title: Text(
-                        "Power Stats",
-                        style: TextStyle(fontWeight: FontWeight.w500),
-                      ));
+                        title: Text(
+                          "Power Stats",
+                          style: TextStyle(fontWeight: FontWeight.w500),
+                        ),
+                      );
                     },
                     body: PowerStats(
                       heroItem: widget.heroItem,
@@ -147,10 +149,11 @@ class _SuperheroDetailsState extends State<SuperheroDetails> {
                 ExpansionPanel(
                     headerBuilder: (BuildContext context, bool isExpanded) {
                       return ListTile(
-                          title: Text(
-                        "Connections",
-                        style: TextStyle(fontWeight: FontWeight.w500),
-                      ));
+                        title: Text(
+                          "Connections",
+                          style: TextStyle(fontWeight: FontWeight.w500),
+                        ),
+                      );
                     },
                     body: Connections(
                       heroItem: widget.heroItem,
@@ -168,7 +171,7 @@ class _SuperheroDetailsState extends State<SuperheroDetails> {
 class Biography extends StatelessWidget {
   final HeroItem? heroItem;
 
-  const Biography({Key? key, this.heroItem}) : super(key: key);
+  Biography({Key? key, this.heroItem}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -232,7 +235,7 @@ class Biography extends StatelessWidget {
 class Appearance extends StatelessWidget {
   final HeroItem? heroItem;
 
-  const Appearance({Key? key, required this.heroItem}) : super(key: key);
+  Appearance({Key? key, required this.heroItem}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -302,7 +305,7 @@ class Appearance extends StatelessWidget {
 class Work extends StatelessWidget {
   final HeroItem? heroItem;
 
-  const Work({Key? key, required this.heroItem}) : super(key: key);
+  Work({Key? key, required this.heroItem}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -325,7 +328,7 @@ class Work extends StatelessWidget {
 class PowerStats extends StatelessWidget {
   final HeroItem? heroItem;
 
-  const PowerStats({Key? key, required this.heroItem}) : super(key: key);
+  PowerStats({Key? key, required this.heroItem}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -340,13 +343,13 @@ class PowerStats extends StatelessWidget {
                 ),
           ),
           subtitle: LinearPercentIndicator(
-            animation: true,
-            lineHeight: 15.0,
-            animationDuration: 5000,
-            percent: double.parse(heroItem!.powerstats!.intelligence!) / 100.0,
-            linearStrokeCap: LinearStrokeCap.roundAll,
-            progressColor: Colors.blue,
-          ),
+              animation: true,
+              lineHeight: 15.0,
+              animationDuration: 5000,
+              percent:
+                  double.parse(heroItem!.powerstats!.intelligence!) / 100.0,
+              linearStrokeCap: LinearStrokeCap.roundAll,
+              progressColor: Colors.blue),
         ),
         ListTile(
           title: Text(
@@ -436,7 +439,7 @@ class PowerStats extends StatelessWidget {
 class Connections extends StatelessWidget {
   final HeroItem? heroItem;
 
-  const Connections({Key? key, required this.heroItem}) : super(key: key);
+  Connections({Key? key, required this.heroItem}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

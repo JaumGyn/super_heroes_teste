@@ -77,7 +77,7 @@ class HeroSearch extends SearchDelegate {
           HeroItem? heroItem = search[position];
 
           return Padding(
-            padding: const EdgeInsets.only(top: 5.0),
+            padding: EdgeInsets.only(top: 5.0),
             child: SuperHero(
               heroItem: heroItem,
             ),

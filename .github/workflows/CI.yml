@@ -11,7 +11,7 @@ on:
 
 jobs:
   flutter_tests:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Get Repository
         uses: actions/checkout@v3
@@ -28,11 +28,39 @@ jobs:
         with:
           channel: 'stable'
 
-      - name: Run Flutter Pub Get
+      - name: Run flutter pub get
         run: flutter pub get
 
-      - name: Run Flutter tests
+      - name: Run flutter analyze 
+        run: flutter analyze
+        
+      - name: Run flutter tests
         run: flutter test
+
+      - name: Flutter format
+        run: flutter format --dry-run --set-exit-if-changed lib/
+
+      - name: Flutter format test
+        run: flutter format --dry-run --set-exit-if-changed test/
+
+      - name: Run flutter coverage
+        run: flutter test --coverage
+
+      - name: Run flutter results
+        run: flutter test --machine > test-results.json
+
+      - name: Test results  
+        uses: dorny/test-reporter@v1.4.2
+        with:
+          name: test-results
+          path: test-results.json
+          reporter: flutter-json
+
+      - name: test-coverage
+        uses: VeryGoodOpenSource/very_good_coverage@v1.1.1
+        with:
+          min_coverage: 00
+
  
 
 

@@ -5,7 +5,7 @@ class Avatar extends StatelessWidget {
   final radius;
   final Images? img;
 
-  const Avatar({
+  Avatar({
     Key? key,
     @required this.img,
     this.radius = 40.0,
