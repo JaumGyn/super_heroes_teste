@@ -6,7 +6,6 @@ import 'package:super_heroes/shared/search.dart';
 import 'package:super_heroes/shared/superhero.dart';
 import 'package:super_heroes/provider/super_heroes_store.dart';
 import 'package:provider/provider.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
